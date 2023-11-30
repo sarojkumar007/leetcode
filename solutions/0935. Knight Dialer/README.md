@@ -1,4 +1,4 @@
-# solutions\935. Knight Dialer
+# solutions\0935. Knight Dialer
 
 Difficuly: `medium`
 
