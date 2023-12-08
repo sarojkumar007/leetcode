@@ -1,0 +1,91 @@
+# solutions\0606. Construct String from Binary Tree
+
+Difficulty: `easy`
+
+Topics: `String`, `Tree`, `Depth-First Search`, `Binary Tree`
+
+## Q
+
+Given the `root` of a binary tree, construct a string consisting of parenthesis and integers from a binary tree with the preorder traversal way, and return it.
+
+Omit all the empty parenthesis pairs that do not affect the one-to-one mapping relationship between the string and the original binary tree.
+
+Example 1:
+
+![Ex1](https://assets.leetcode.com/uploads/2021/05/03/cons1-tree.jpg)
+
+```
+Input: root = [1,2,3,4]
+Output: "1(2(4))(3)"
+Explanation: Originally, it needs to be "1(2(4)())(3()())", but you need to omit all the unnecessary empty parenthesis pairs. And it will be "1(2(4))(3)"
+```
+
+Example 2:
+
+![Ex2](https://assets.leetcode.com/uploads/2021/05/03/cons2-tree.jpg)
+
+```
+Input: root = [1,2,3,null,4]
+Output: "1(2()(4))(3)"
+Explanation: Almost the same as the first example, except we cannot omit the first parenthesis pair to break the one-to-one mapping relationship between the input and the output.
+```
+
+Constraints:
+
+- The number of nodes in the tree is in the range [1, 10<sup>4</sup>].
+- `-1000 <= Node.val <= 1000`
+
+## S
+
+### Python
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def tree2str(self, root: Optional[TreeNode]) -> str:
+        def dfs(root):
+            if root is None:
+                return ''
+            if root.left is None and root.right is None:
+                return str(root.val)
+            if root.right is None:
+                return f'{root.val}({dfs(root.left)})'
+            return f'{root.val}({dfs(root.left)})({dfs(root.right)})'
+
+        return dfs(root)
+```
+
+### Typescript
+
+```ts
+/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */
+
+function tree2str(root: TreeNode | null): string {
+  if (root == null) {
+    return "";
+  }
+  if (root.left == null && root.right == null) {
+    return `${root.val}`;
+  }
+  return `${root.val}(${root.left ? tree2str(root.left) : ""})${
+    root.right ? `(${tree2str(root.right)})` : ""
+  }`;
+}
+```
