@@ -9,7 +9,7 @@ Leetcode Solutions that I've done currently.
 
 Stay tuned for more.
 
-### Developer
+### DevOps || Web Developer
 
 [sarojkumar007](http://github.com/sarojkumar007)
 
