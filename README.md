@@ -9,8 +9,8 @@ Leetcode Solutions that I've done currently.
 
 Stay tuned for more.
 
-### DevOps || Web Developer
+### By
 
-[sarojkumar007](http://github.com/sarojkumar007)
+_Saroj Kumar Sahoo_
 
-<a href="https://sarojkumar.dev" target="__blank" style="color: gray;">sarojkumar.dev</a>
+(<a href="https://sarojkumar.dev" target="__blank" style="color: gray;">_sarojkumar.dev_</a>)
