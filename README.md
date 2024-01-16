@@ -6,6 +6,7 @@ Leetcode Solutions that I've done currently.
 
 - Daily Challenges
 - 30 Days of JavaScript
+- Programming Skills
 
 Stay tuned for more.
 
