@@ -50,6 +50,8 @@ Constraints:
 
 ## Solution
 
+### JavaScript
+
 ```javascript
 /**
  * @param {number[]} nums
