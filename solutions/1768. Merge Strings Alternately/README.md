@@ -1,4 +1,4 @@
-# programming-skills\1768. Merge Strings Alternately
+# solutions\1768. Merge Strings Alternately
 
 Difficulty: `easy`
 
